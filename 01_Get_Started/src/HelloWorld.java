@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println(Style.GREEN + "\n\n\n ********* Get started *********\n" + Style.RESET);
@@ -132,7 +134,64 @@ to the screen, and it is amazing */
         /* Calculate the percentage of the user's score in relation to the maximum available score.
         Convert userScore to float to make sure that the division is accurate */
         float percentage = (float) userScore / maxScore * 100.0f;
-
         System.out.println("User's percentage is " + percentage);
+
+        // Strings
+        System.out.println(Style.GREEN + "\n\n\n ********* Strings *********\n" + Style.RESET);
+
+        String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        System.out.println("The length of the txt string is: " + txt.length());
+
+        String txt1 = "Hello World";
+        System.out.println(txt1.toUpperCase());   // Outputs "HELLO WORLD"
+        System.out.println(txt1.toLowerCase());   // Outputs "hello world"
+
+        String txt2 = "Please locate where 'locate' occurs!";
+        System.out.println(txt2.indexOf("locate")); // Outputs 7
+
+        // String Concatenation
+
+        String firstName1 = "John";
+        String lastName1 = "Doe";
+        System.out.println(firstName1 + " " + lastName1);
+        System.out.println(firstName1.concat(" ").concat(lastName1));
+        System.out.printf("%s %s\n", firstName1, lastName1);
+        System.out.println("Hello".concat(" World"));
+
+        // Scape character
+
+        System.out.println("It\'s alright.");
+        System.out.println("We are the so-called \"Vikings\" from the north.");
+
+        System.out.println("Hello".charAt(1)); // e
+        System.out.println("Hello".compareTo("HELlo")); // 101
+        System.out.println("Hello".compareToIgnoreCase("HELLO")); // 101
+        System.out.println("Hello".concat(" World")); // Hello World
+        System.out.println("Hello".contains("llo")); // true
+        System.out.println("Hello".contentEquals("Hello")); // true
+        System.out.println("Hello".equals("Hello")); // true
+        System.out.println("Hello".equalsIgnoreCase("HELLO")); // true
+        char[] charArr = {'H', 'e', 'l', 'l', 'o'};
+        System.out.println("".copyValueOf(charArr,0,5)); // Hello
+        System.out.println("file.txt".endsWith("txt")); // true
+        System.out.printf("%S %s\n", firstName1, lastName1);
+        System.out.println("Hello".hashCode()); // 69609650
+        System.out.println("Hello planet earth, you are a great planet.".indexOf("planet")); // 6
+        System.out.println("Hello planet earth, you are a great planet.".lastIndexOf("planet")); // 36
+        System.out.println("".isEmpty()); // true
+        System.out.println("Hi".isEmpty()); // false
+        System.out.println(String.join(" ", "Orange", "Apple", "Mango")); // Orange Apple Mango
+        System.out.println("ABCDEFGHIJKLMNOPQRSTUVWXYZ".length()); // 26
+        System.out.println("John Snow".matches("^[A-Za-z ]+$")); // true
+        System.out.println("Hello".replace("l", "p")); // Heppo
+        System.out.println("Phone: 123-456".replaceAll("\\d", "*")); // Phone: ***-***
+        System.out.println(Arrays.toString("apple, banana, orange".split(", "))); // [apple, banana, orange]
+        System.out.println("Hello".startsWith("llo")); // false
+        System.out.println("Hello, World!".subSequence(7, 12)); // World
+        System.out.println("Hello, World!".substring(7, 12));
+        System.out.println(Arrays.toString("Hello".toCharArray())); // [H, e, l, l, o]
+        System.out.println("  \u2003Hello\t ".trim()); // Hi
+        System.out.println("  \u2003Hello\t ".strip()); // Hello
+
     }
 }
