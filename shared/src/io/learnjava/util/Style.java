@@ -1,3 +1,5 @@
+package io.learnjava.util;
+
 public final class Style {
 
     // Prevent instantiation
