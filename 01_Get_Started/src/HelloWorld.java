@@ -18,6 +18,36 @@ public class HelloWorld {
 to the screen, and it is amazing */
         System.out.println("After the comments!");
 
+        // Java Output
+        // %[arg$][flags][width][.precision]conversion
+        System.out.println(Style.GREEN + "\n\n\n ********* Output - pintf() *********\n" + Style.RESET);
+
+        // Simple conversion
+        System.out.printf("Hello %s!\n", "world");        // %s = string
+        System.out.printf("You have %d apples.\n", 5);     // %d = integer
+        System.out.printf("Price: %.2f EUR\n", 3.456);     // %.2f = float, 2 decimal digits
+
+        // [arg$] — Specify which argument to use
+        System.out.printf("%2$s is %1$d years old.\n", 25, "Alice");
+
+        // [flags] — Format signs, alignment, padding
+        System.out.printf("Balance: %+d\n", 100);         // '+' flag
+        System.out.printf("Aligned: |%-10s|\n", "left");  // '-' flag (left-aligned)
+        System.out.printf("Aligned: |%10s|\n", "right");  // flag (right-aligned)
+        System.out.printf("Padded: |%010d|\n", 42);        // '0' flag (zero-padding)
+
+        // [width] — Minimum space the value should take
+        System.out.printf("|%10s|\n", "Java");     // right-aligned in 10-character field
+        System.out.printf("|%-10s|\n", "Java");    // left-aligned
+
+        // [.precision] — Control decimals or string length
+        System.out.printf("%.2f\n", 3.14159);      // float with 2 decimals
+        System.out.printf("%.3s\n", "JavaWorld");  // only first 3 letters of string
+
+        // Full Example with Everything:
+        System.out.printf("%2$-10s is %1$+07d years old.\n", 25, "Bob");
+
+
         // Variables
         System.out.println(Style.GREEN + "\n\n\n ********* Variables *********\n" + Style.RESET);
 
@@ -193,5 +223,36 @@ to the screen, and it is amazing */
         System.out.println("  \u2003Hello\t ".trim()); // Hi
         System.out.println("  \u2003Hello\t ".strip()); // Hello
 
+        System.out.println(Style.GREEN + "\n\n\n ********* Math *********\n" + Style.RESET);
+
+        System.out.println((int)(Math.random() * 101));
+
+
+        // Methods
+        System.out.println(Style.GREEN + "\n\n\n ********* Methods *********\n" + Style.RESET);
+
+        // Recursion
+        int result = sum(10);
+        System.out.println(result);
+
+        int result2 = sum(5, 10);
+        System.out.println(result2);
+    }
+
+    // Methods - Recursion
+    public static int sum(int k) {
+        if (k > 0) {
+            return k + sum(k - 1);
+        } else {
+            return 0;
+        }
+    }
+
+    public static int sum(int start, int end) {
+        if (end > start) {
+            return end + sum(start, end - 1);
+        } else {
+            return end;
+        }
     }
 }
