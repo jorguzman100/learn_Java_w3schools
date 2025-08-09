@@ -23,7 +23,7 @@ to the screen, and it is amazing */
 
         // Java Output
         // %[arg$][flags][width][.precision]conversion
-        System.out.println(Style.GREEN + "\n\n\n ********* Output - pintf() *********\n" + Style.RESET);
+        System.out.println(Style.GREEN + "\n\n\n ********* Output - printf() *********\n" + Style.RESET);
 
         // Simple conversion
         System.out.printf("Hello %s!\n", "world");        // %s = string
