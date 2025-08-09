@@ -64,14 +64,14 @@ to the screen, and it is amazing */
         myNum2 = 15;
         System.out.println(myNum2);
 
-        final int myNum3 = 15; // Constant
+        // final int myNum3 = 15; // Constant
         // myNum3 = 20;  This would generate an error: cannot assign a value to a final variable
 
-        int myNum4 = 5;
-        float myFloatNum = 5.99f;
-        char myLetter = 'D';
-        boolean myBool = true;
-        String myText = "Hello";
+        // int myNum4 = 5;
+        // float myFloatNum = 5.99f;
+        // char myLetter = 'D';
+        // boolean myBool = true;
+        // String myText = "Hello";
 
         String name2 = "John";
         System.out.println("Hello " + name2);
@@ -90,10 +90,10 @@ to the screen, and it is amazing */
         System.out.println(x + y + z);
 
         // Good
-        int minutesPerHour = 60;
+        // int minutesPerHour = 60;
 
         // OK, but not so easy to understand what m actually is
-        int m = 60;
+        // int m = 60;
 
         // Float and double
         float myNumf = 5.75f;
@@ -204,8 +204,8 @@ to the screen, and it is amazing */
         System.out.println("Hello".contentEquals("Hello")); // true
         System.out.println("Hello".equals("Hello")); // true
         System.out.println("Hello".equalsIgnoreCase("HELLO")); // true
-        char[] charArr = {'H', 'e', 'l', 'l', 'o'};
-        System.out.println("".copyValueOf(charArr,0,5)); // Hello
+        // char[] charArr = {'H', 'e', 'l', 'l', 'o'};
+        // System.out.println("".copyValueOf(charArr,0,5)); // Hello
         System.out.println("file.txt".endsWith("txt")); // true
         System.out.printf("%S %s\n", firstName1, lastName1);
         System.out.println("Hello".hashCode()); // 69609650
