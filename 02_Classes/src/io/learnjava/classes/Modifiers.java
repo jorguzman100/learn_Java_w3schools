@@ -14,15 +14,15 @@ public class Modifiers {
     int internalCode;
 
     // ✅ private: accessible only within this class (nowhere else, not even subclasses)
-    private String password;
+    // private String password;
 
     // ✅ transient: this field will NOT be serialized when the object is saved to a stream
     // 🧩 useful for temporary, sensitive, or runtime-only data
-    private transient String sessionToken;
+    // private transient String sessionToken;
 
     // ✅ volatile: ensures that all threads see the most up-to-date value immediately
     // 🧩 important in multi-threaded programs for shared variables
-    private volatile boolean running = true;
+    // private volatile boolean running = true;
 
     // ✅ public: this method can be called from anywhere in the program
     // 🧩 instance method — requires an object to call: example.greet();
@@ -44,9 +44,9 @@ public class Modifiers {
 
     // ✅ private: only accessible within this class
     // 🔐 used to hide sensitive or internal operations
-    private void encrypt() {
-        System.out.println("Encrypting...");
-    }
+    // private void encrypt() {
+    //     System.out.println("Encrypting...");
+    // }
 
     // ✅ public: accessible from anywhere
     // ✅ static: can be called without creating an object (e.g., Example.about())

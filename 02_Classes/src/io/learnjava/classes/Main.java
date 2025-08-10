@@ -1,5 +1,12 @@
 package io.learnjava.classes;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.chrono.ChronoLocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         // Class - Classes
@@ -27,8 +34,11 @@ public class Main {
         System.out.printf("My car is a %2$s model year %1$d!%n", carObj2.modelYear, carObj2.modelName);
 
         // ==============================
-        // 1. Create Modifiers object
+        // Modifiers
         // ==============================
+
+        // 1. Create Modifiers object
+
         Modifiers example = new Modifiers();
 
         // Fields
@@ -39,9 +49,9 @@ public class Main {
         // example.sessionToken = "token";                    // ❌ private (even though transient)
         // example.running = false;                           // ❌ private (even though volatile)
 
-        // ==============================
+
         // 2. Call methods
-        // ==============================
+
         example.greet();             // ✅ public
         example.validate();          // ✅ protected: accessible in same package
         example.log();               // ✅ default/package-private: accessible in same package
@@ -51,12 +61,42 @@ public class Main {
         example.deposit(200.0);      // ✅ public synchronized
         Modifiers.globalLockOperation(); // ✅ public static synchronized
 
-        // ==============================
+
         // 3. Work with Shape (abstract class)
-        // ==============================
+
         Square square = new Square(4);
         square.draw(); // ✅ Calls subclass implementation
 
+        // ==============================
+        // Encapsulation
+        // ==============================
+
+        Person myPerson = new Person();
+        System.out.println(myPerson.getName());
+        myPerson.setName("Jorge");
+        System.out.println(myPerson.getName());
+
+        // ==============================
+        // Java Packages / API
+        // ==============================
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Username: ");
+        String userName = scan.nextLine();
+        System.out.println("User name is: " + userName);
+
+
+        // Display current date & time
+
+        System.out.printf("Today is: %s%n", LocalDate.now());
+        System.out.printf("The time now is: %s%n", LocalTime.now());
+
+        LocalDateTime myDateTime = LocalDateTime.now();
+        DateTimeFormatter myDateTimeFormat = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss");
+        String formattedDateTime = myDateTime.format(myDateTimeFormat);
+
+        System.out.printf("DateTime before format: %s%n", myDateTime);
+        System.out.printf("DateTime after format: %s%n", formattedDateTime);
     }
 
     // Static method
@@ -68,4 +108,6 @@ public class Main {
     public void myPublicMethod() {
         System.out.println("Public methods must be called by creating objects");
     }
+
+
 }
